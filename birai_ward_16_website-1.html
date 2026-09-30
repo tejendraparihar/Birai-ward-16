@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>बिराई वार्ड 16 | ग्राम पंचायत बिराई</title>
+<meta name="description" content="बिराई वार्ड 16 की सार्वजनिक जानकारी, सरकारी सेवाएं, योजनाएं, विकास कार्य और महत्वपूर्ण सूचनाएं।">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Noto Sans Devanagari","Mangal",Arial,sans-serif;background:#f7f8fa;color:#20252b;line-height:1.7}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{width:92%;max-width:1180px;margin:auto}
+
+.topbar{background:#fff;border-bottom:1px solid #e6e8eb;font-size:14px}
+.topbar-inner{min-height:40px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.topbar-left{color:#555}.topbar-right{display:flex;gap:18px;color:#555}
+
+header{background:#fff;border-bottom:1px solid #e2e5e8;position:sticky;top:0;z-index:1000}
+.navbar{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-icon{width:48px;height:48px;border:2px solid #1d5f8c;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;color:#1d5f8c;background:#f8fbfd}
+.logo-text h1{font-size:21px;line-height:1.2;color:#173f5f}.logo-text p{font-size:12px;color:#777}
+nav{display:flex;align-items:center;gap:5px}
+nav a{padding:9px 12px;border-radius:6px;font-size:14px;color:#42484e}
+nav a:hover{background:#f1f5f8;color:#174f78}
+.menu-btn{display:none;border:1px solid #ddd;background:#fff;font-size:22px;padding:5px 10px;border-radius:6px}
+
+.hero{background:#fff;border-bottom:1px solid #e4e7ea}
+.hero-grid{min-height:410px;display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:50px}
+.hero-tag{display:inline-block;border:1px solid #d9e4eb;background:#f7fafc;color:#235c80;padding:5px 13px;border-radius:20px;font-size:13px;margin-bottom:15px}
+.hero h2{font-size:44px;line-height:1.25;color:#173f5f;margin-bottom:12px}.hero h2 span{color:#8b5e34}
+.hero-description{max-width:650px;color:#606870;font-size:17px}
+.hero-buttons{margin-top:25px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:11px 18px;border-radius:6px;font-size:14px;border:1px solid transparent;cursor:pointer}
+.btn-primary{background:#1d5f8c;color:#fff}.btn-primary:hover{background:#174e75}
+.btn-outline{border-color:#ccd5dc;background:#fff;color:#31566d}.btn-outline:hover{background:#f5f7f9}
+.hero-card{border:1px solid #e0e5e9;background:#fbfcfd;padding:25px;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,.04)}
+.hero-card-title{color:#777;font-size:13px;margin-bottom:5px}.hero-card h3{color:#173f5f;font-size:25px}
+.hero-card-line{height:1px;background:#e5e8eb;margin:18px 0}
+.info-row{display:flex;justify-content:space-between;gap:15px;padding:6px 0;font-size:14px}
+.info-row span:first-child{color:#777}.info-row span:last-child{font-weight:600}
+
+section{padding:65px 0}
+.section-heading{text-align:center;margin-bottom:35px}.section-heading .small{color:#8b5e34;font-size:13px;font-weight:600}
+.section-heading h2{color:#173f5f;font-size:30px;margin-top:3px}.section-heading p{color:#737980;max-width:650px;margin:7px auto 0}
+
+.stats{background:#fff;border-bottom:1px solid #e6e8ea}.stats-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:25px;text-align:center;border-right:1px solid #e5e7e9}.stat:last-child{border-right:none}
+.stat-number{font-size:28px;font-weight:700;color:#1d5f8c}.stat-label{color:#777;font-size:13px}
+
+.about{background:#f7f8fa}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.info-card{background:#fff;border:1px solid #e2e5e8;border-radius:10px;padding:25px}
+.info-card h3{color:#173f5f;margin-bottom:12px;font-size:20px}.info-card p{color:#626970;font-size:15px}
+.list{list-style:none}.list li{padding:10px 0;border-bottom:1px solid #edf0f2;font-size:14px}
+.list li:last-child{border-bottom:none}.list li::before{content:"✓";color:#1d5f8c;margin-right:9px;font-weight:bold}
+
+.services{background:#fff}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.service-card{background:#fff;border:1px solid #e1e5e8;border-radius:10px;padding:22px;transition:.2s}
+.service-card:hover{transform:translateY(-3px);box-shadow:0 8px 25px rgba(0,0,0,.05)}
+.service-icon{width:44px;height:44px;background:#f1f6f9;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:21px;margin-bottom:15px}
+.service-card h3{color:#234d68;font-size:17px;margin-bottom:5px}.service-card p{color:#737980;font-size:13px}
+
+.works{background:#f7f8fa}.work-table{width:100%;border-collapse:collapse;background:#fff;border:1px solid #e0e4e7;border-radius:10px;overflow:hidden}
+.work-table th,.work-table td{padding:14px;border-bottom:1px solid #e7e9eb;text-align:left;font-size:14px}.work-table th{background:#f4f7f9;color:#294e65}
+.status{display:inline-block;padding:3px 9px;border-radius:20px;font-size:12px}
+.status-running{background:#fff5df;color:#986700}.status-complete{background:#eaf6ef;color:#267044}.status-proposed{background:#edf3f8;color:#315d7b}
+
+.scheme-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.scheme{background:#fff;border:1px solid #e0e4e7;padding:22px;border-radius:10px}
+.scheme h3{color:#234d68;font-size:17px}.scheme p{font-size:13px;color:#71777d;margin:7px 0 13px}
+
+.profile-section{background:#fff}.profile-box{max-width:850px;margin:auto;border:1px solid #dfe4e7;border-radius:12px;padding:28px;display:grid;grid-template-columns:160px 1fr;gap:28px;align-items:center}
+.profile-photo{width:145px;height:145px;border-radius:50%;border:1px solid #d9dee2;background:#f3f5f6;display:flex;align-items:center;justify-content:center;color:#888;font-size:13px;text-align:center;overflow:hidden}
+.profile-photo img{width:100%;height:100%;object-fit:cover}.profile-box h3{font-size:24px;color:#173f5f}
+.profile-box .designation{color:#8b5e34;font-size:14px;margin:3px 0 10px}.profile-box p{color:#666d73;font-size:14px}
+
+.notice{background:#f7f8fa}.notice-board{max-width:850px;margin:auto;background:#fff;border:1px solid #e0e4e7;border-radius:10px}
+.notice-item{display:flex;gap:15px;padding:17px 20px;border-bottom:1px solid #e8eaec}.notice-item:last-child{border-bottom:none}
+.notice-date{min-width:75px;height:45px;background:#f1f5f7;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#315d7b;font-size:12px}
+.notice-item h4{color:#31566d;font-size:15px}.notice-item p{color:#777;font-size:12px}
+
+.gallery{background:#fff}.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.gallery-item{height:190px;border:1px solid #e0e4e7;background:#f1f3f4;border-radius:8px;overflow:hidden;display:flex;align-items:center;justify-content:center;color:#888;font-size:13px}
+.gallery-item img{width:100%;height:100%;object-fit:cover}
+
+.contact{background:#f7f8fa}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.contact-card{background:#fff;border:1px solid #e0e4e7;border-radius:10px;padding:25px}
+.contact-row{padding:12px 0;border-bottom:1px solid #edf0f2}.contact-row:last-child{border-bottom:none}
+.contact-label{font-size:12px;color:#888}.contact-value{font-size:15px;color:#31566d}
+
+.links{background:#fff}.link-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.official-link{border:1px solid #dfe4e7;padding:20px;border-radius:9px;background:#fff}
+.official-link h3{font-size:17px;color:#234d68}.official-link p{color:#747a80;font-size:13px;margin:5px 0 12px}
+
+.documents{background:#f7f8fa}
+.document-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.document-card{background:#fff;border:1px solid #e0e4e7;border-radius:10px;padding:22px}
+.document-card h3{color:#234d68;font-size:17px}.document-card p{font-size:13px;color:#71777d;margin:7px 0 13px}
+
+footer{background:#173f5f;color:#e9eef2;padding:40px 0 20px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:30px}
+footer h3{font-size:17px;margin-bottom:10px}footer p,footer li{color:#cbd7df;font-size:13px}
+footer ul{list-style:none}footer li{padding:3px 0}
+.copyright{margin-top:30px;padding-top:18px;border-top:1px solid rgba(255,255,255,.15);text-align:center;font-size:12px;color:#b9c8d2}
+
+@media(max-width:900px){
+.hero-grid{grid-template-columns:1fr;padding:55px 0}.hero h2{font-size:35px}
+.cards{grid-template-columns:repeat(2,1fr)}.scheme-grid,.document-grid{grid-template-columns:repeat(2,1fr)}
+.gallery-grid{grid-template-columns:repeat(2,1fr)}.link-grid{grid-template-columns:1fr 1fr}
+nav{display:none;position:absolute;top:76px;left:0;right:0;background:#fff;border-bottom:1px solid #ddd;flex-direction:column;align-items:stretch;padding:10px}
+nav.active{display:flex}nav a{padding:12px}.menu-btn{display:block}
+}
+@media(max-width:600px){
+.topbar-right{display:none}.topbar-inner{justify-content:center}.navbar{min-height:65px}
+.logo-text h1{font-size:17px}.logo-icon{width:40px;height:40px}.hero h2{font-size:29px}.hero-description{font-size:15px}
+section{padding:48px 0}.section-heading h2{font-size:25px}.stats-grid{grid-template-columns:1fr 1fr}
+.stat{border-bottom:1px solid #e5e7e9}.about-grid,.contact-grid{grid-template-columns:1fr}
+.cards,.scheme-grid,.document-grid,.gallery-grid,.link-grid{grid-template-columns:1fr}
+.profile-box{grid-template-columns:1fr;text-align:center}.profile-photo{margin:auto}
+.work-table{display:block;overflow-x:auto;white-space:nowrap}.footer-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+<div class="container topbar-inner">
+<div class="topbar-left">बिराई ग्राम पंचायत • वार्ड नं. 16</div>
+<div class="topbar-right"><span>हिंदी</span><span>सार्वजनिक सूचना</span></div>
+</div>
+</div>
+
+<header>
+<div class="container navbar">
+<a href="#home" class="logo">
+<div class="logo-icon">बि</div>
+<div class="logo-text"><h1>बिराई वार्ड 16</h1><p>ग्राम पंचायत बिराई</p></div>
+</a>
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+<nav id="mainNav">
+<a href="#home">होम</a>
+<a href="#about">वार्ड परिचय</a>
+<a href="#services">सेवाएं</a>
+<a href="#works">कार्य</a>
+<a href="#schemes">योजनाएं</a>
+<a href="#documents">दस्तावेज</a>
+<a href="#notice">सूचना</a>
+<a href="#gallery">गैलरी</a>
+<a href="#contact">संपर्क</a>
+</nav>
+</div>
+</header>
+
+<main id="home">
+
+<section class="hero">
+<div class="container hero-grid">
+<div>
+<span class="hero-tag">सार्वजनिक सूचना एवं वार्ड जानकारी</span>
+<h2><span>बिराई</span><br>वार्ड नं. 16</h2>
+<p class="hero-description">वार्ड से संबंधित सार्वजनिक जानकारी, सरकारी सेवाएं, योजनाएं, विकास कार्य और महत्वपूर्ण सूचनाएं एक स्थान पर।</p>
+<div class="hero-buttons">
+<a href="#about" class="btn btn-primary">वार्ड की जानकारी</a>
+<a href="#services" class="btn btn-outline">सेवाएं देखें</a>
+</div>
+</div>
+<div class="hero-card">
+<div class="hero-card-title">वार्ड विवरण</div>
+<h3>वार्ड नं. 16</h3>
+<div class="hero-card-line"></div>
+<div class="info-row"><span>ग्राम पंचायत</span><span>बिराई</span></div>
+<div class="info-row"><span>वार्ड</span><span>16</span></div>
+<div class="info-row"><span>क्षेत्र</span><span>ग्रामीण</span></div>
+<div class="info-row"><span>वेबसाइट प्रकार</span><span>Informational</span></div>
+</div>
+</div>
+</section>
+
+<section class="stats">
+<div class="container stats-grid">
+<div class="stat"><div class="stat-number">16</div><div class="stat-label">वार्ड नंबर</div></div>
+<div class="stat"><div class="stat-number">—</div><div class="stat-label">परिवार</div></div>
+<div class="stat"><div class="stat-number">—</div><div class="stat-label">जनसंख्या</div></div>
+<div class="stat"><div class="stat-number">—</div><div class="stat-label">प्रमुख सुविधाएं</div></div>
+</div>
+</section>
+
+<section class="about" id="about">
+<div class="container">
+<div class="section-heading"><div class="small">WARD INFORMATION</div><h2>वार्ड परिचय</h2><p>यहां वार्ड से संबंधित सत्यापित सार्वजनिक जानकारी जोड़ी जा सकती है।</p></div>
+<div class="about-grid">
+<div class="info-card">
+<h3>बिराई वार्ड 16</h3>
+<p>ग्राम पंचायत बिराई के वार्ड नंबर 16 से संबंधित सार्वजनिक सूचना और स्थानीय सुविधाओं को डिजिटल रूप में प्रस्तुत करने के लिए यह वेबसाइट बनाई गई है।</p>
+<br>
+<p>जनसंख्या, परिवारों की संख्या, क्षेत्रफल, सीमाएं आदि आंकड़े केवल आधिकारिक स्रोत से सत्यापित होने के बाद यहां जोड़े जाएं।</p>
+</div>
+<div class="info-card">
+<h3>वार्ड में उपलब्ध जानकारी</h3>
+<ul class="list">
+<li>पानी एवं जल व्यवस्था</li><li>बिजली एवं स्ट्रीट लाइट</li><li>सड़क एवं नाली व्यवस्था</li><li>सफाई व्यवस्था</li><li>शिक्षा एवं आंगनवाड़ी</li><li>स्वास्थ्य सुविधाएं</li><li>सरकारी योजनाएं</li><li>विकास कार्य</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="services" id="services">
+<div class="container">
+<div class="section-heading"><div class="small">PUBLIC SERVICES</div><h2>प्रमुख सेवाएं</h2><p>वार्ड निवासियों के लिए उपयोगी सार्वजनिक सेवाओं और जानकारी के लिंक यहां जोड़े जा सकते हैं।</p></div>
+<div class="cards">
+<div class="service-card"><div class="service-icon">💧</div><h3>पानी</h3><p>जल आपूर्ति, पाइपलाइन एवं संबंधित सार्वजनिक जानकारी।</p></div>
+<div class="service-card"><div class="service-icon">💡</div><h3>बिजली</h3><p>बिजली एवं स्ट्रीट लाइट से संबंधित सार्वजनिक जानकारी।</p></div>
+<div class="service-card"><div class="service-icon">🛣️</div><h3>सड़क</h3><p>सड़क, नाली और सार्वजनिक निर्माण कार्यों की जानकारी।</p></div>
+<div class="service-card"><div class="service-icon">🧹</div><h3>सफाई</h3><p>सफाई एवं स्वच्छता से संबंधित स्थानीय जानकारी।</p></div>
+<div class="service-card"><div class="service-icon">🏫</div><h3>शिक्षा</h3><p>विद्यालय, आंगनवाड़ी और शिक्षा संबंधी जानकारी।</p></div>
+<div class="service-card"><div class="service-icon">🏥</div><h3>स्वास्थ्य</h3><p>स्वास्थ्य केंद्र एवं उपलब्ध सार्वजनिक सुविधाएं।</p></div>
+<div class="service-card"><div class="service-icon">🧾</div><h3>ई-मित्र</h3><p>ई-मित्र एवं ऑनलाइन सरकारी सेवाओं की जानकारी।</p></div>
+<div class="service-card"><div class="service-icon">🌾</div><h3>कृषि</h3><p>कृषि, किसान योजनाओं और संबंधित सेवाओं की जानकारी।</p></div>
+</div>
+</div>
+</section>
+
+<section class="works" id="works">
+<div class="container">
+<div class="section-heading"><div class="small">DEVELOPMENT</div><h2>वार्ड के विकास कार्य</h2><p>केवल सत्यापित कार्यों की जानकारी यहां दर्ज करें।</p></div>
+<div style="overflow-x:auto;">
+<table class="work-table">
+<thead><tr><th>क्रम</th><th>कार्य</th><th>स्थान</th><th>स्थिति</th><th>वर्ष</th></tr></thead>
+<tbody>
+<tr><td>01</td><td>उदाहरण कार्य</td><td>वार्ड 16</td><td><span class="status status-complete">पूर्ण</span></td><td>2025-26</td></tr>
+<tr><td>02</td><td>उदाहरण कार्य</td><td>वार्ड 16</td><td><span class="status status-running">प्रगतिरत</span></td><td>2026</td></tr>
+<tr><td>03</td><td>प्रस्तावित कार्य</td><td>वार्ड 16</td><td><span class="status status-proposed">प्रस्तावित</span></td><td>—</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<section id="schemes">
+<div class="container">
+<div class="section-heading"><div class="small">GOVERNMENT SCHEMES</div><h2>सरकारी योजनाएं</h2><p>पात्रता और लाभार्थी संबंधी जानकारी हमेशा आधिकारिक स्रोत से जांचें।</p></div>
+<div class="scheme-grid">
+<div class="scheme"><h3>मनरेगा</h3><p>ग्रामीण रोजगार से संबंधित योजना की जानकारी।</p><a href="#official-links" class="btn btn-outline">जानकारी देखें</a></div>
+<div class="scheme"><h3>सामाजिक सुरक्षा पेंशन</h3><p>पेंशन संबंधी पात्रता एवं लाभार्थी जानकारी।</p><a href="#official-links" class="btn btn-outline">जानकारी देखें</a></div>
+<div class="scheme"><h3>राशन व्यवस्था</h3><p>राशन कार्ड एवं NFSA से संबंधित सार्वजनिक जानकारी।</p><a href="#official-links" class="btn btn-outline">जानकारी देखें</a></div>
+<div class="scheme"><h3>आयुष्मान योजना</h3><p>स्वास्थ्य योजना संबंधी आधिकारिक जानकारी।</p><a href="#official-links" class="btn btn-outline">जानकारी देखें</a></div>
+<div class="scheme"><h3>किसान योजनाएं</h3><p>कृषि एवं किसान कल्याण से संबंधित योजनाएं।</p><a href="#official-links" class="btn btn-outline">जानकारी देखें</a></div>
+<div class="scheme"><h3>ई-मित्र सेवाएं</h3><p>ई-मित्र पर उपलब्ध सेवाओं की जानकारी।</p><a href="#official-links" class="btn btn-outline">जानकारी देखें</a></div>
+</div>
+</div>
+</section>
+
+<section class="documents" id="documents">
+<div class="container">
+<div class="section-heading"><div class="small">DOCUMENTS</div><h2>महत्वपूर्ण दस्तावेज</h2><p>सार्वजनिक PDF दस्तावेज यहां उपलब्ध कराएं।</p></div>
+<div class="document-grid">
+<div class="document-card"><h3>वार्ड की जानकारी</h3><p>वार्ड संबंधी PDF दस्तावेज।</p><a href="ward-information.pdf" target="_blank" class="btn btn-primary">📄 PDF देखें</a></div>
+<div class="document-card"><h3>विकास कार्य</h3><p>विकास कार्यों से संबंधित दस्तावेज।</p><a href="development-work.pdf" target="_blank" class="btn btn-primary">📄 PDF देखें</a></div>
+<div class="document-card"><h3>सरकारी सूचना</h3><p>सार्वजनिक सरकारी सूचना।</p><a href="notice.pdf" target="_blank" class="btn btn-primary">📄 PDF देखें</a></div>
+</div>
+</div>
+</section>
+
+<section class="profile-section">
+<div class="container">
+<div class="section-heading"><div class="small">PUBLIC PROFILE</div><h2>वार्ड प्रतिनिधि प्रोफ़ाइल</h2><p>यह सेक्शन सार्वजनिक प्रोफ़ाइल के लिए है। इसे सरकारी वेबसाइट के रूप में प्रस्तुत न करें।</p></div>
+<div class="profile-box">
+<div class="profile-photo">
+<!-- फोटो जोड़ने के लिए नीचे वाली लाइन को uncomment करें:
+<img src="indra-devi.jpg" alt="इंद्रा देवी">
+-->
+फोटो
+</div>
+<div>
+<h3>इंद्रा देवी</h3>
+<div class="designation">वार्ड नं. 16 • ग्राम पंचायत बिराई</div>
+<p><strong>पति:</strong> श्री रुपाराम परिहार</p>
+<p style="margin-top:8px;">यह सेक्शन उम्मीदवार/प्रतिनिधि की सार्वजनिक जानकारी के लिए रखा गया है। व्यक्तिगत संपर्क जानकारी केवल संबंधित व्यक्ति की अनुमति से जोड़ें।</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="notice" id="notice">
+<div class="container">
+<div class="section-heading"><div class="small">NOTICE BOARD</div><h2>महत्वपूर्ण सूचना</h2><p>स्थानीय सार्वजनिक सूचनाएं यहां प्रकाशित की जा सकती हैं।</p></div>
+<div class="notice-board">
+<div class="notice-item"><div class="notice-date">नई सूचना</div><div><h4>वार्ड संबंधी सूचना</h4><p>यहां सत्यापित सूचना का विवरण लिखें।</p></div></div>
+<div class="notice-item"><div class="notice-date">सूचना</div><div><h4>सरकारी योजना / सेवा अपडेट</h4><p>आधिकारिक स्रोत से प्राप्त जानकारी यहां जोड़ें।</p></div></div>
+</div>
+</div>
+</section>
+
+<section class="gallery" id="gallery">
+<div class="container">
+<div class="section-heading"><div class="small">PHOTO GALLERY</div><h2>फोटो गैलरी</h2><p>वार्ड, सार्वजनिक स्थानों और विकास कार्यों की तस्वीरें।</p></div>
+<div class="gallery-grid">
+<div class="gallery-item"><!-- <img src="photo1.jpg" alt="बिराई वार्ड"> -->फोटो 01</div>
+<div class="gallery-item"><!-- <img src="photo2.jpg" alt="वार्ड का सार्वजनिक स्थान"> -->फोटो 02</div>
+<div class="gallery-item"><!-- <img src="photo3.jpg" alt="वार्ड विकास कार्य"> -->फोटो 03</div>
+<div class="gallery-item"><!-- <img src="photo4.jpg" alt="ग्राम पंचायत बिराई"> -->फोटो 04</div>
+</div>
+</div>
+</section>
+
+<section class="links" id="official-links">
+<div class="container">
+<div class="section-heading"><div class="small">OFFICIAL SOURCES</div><h2>आधिकारिक पोर्टल</h2><p>सरकारी जानकारी के लिए संबंधित आधिकारिक पोर्टल को प्राथमिक स्रोत मानें।</p></div>
+<div class="link-grid">
+<div class="official-link"><h3>जन सूचना पोर्टल</h3><p>वार्ड/पंचायत स्तर की योजनाओं और सरकारी सेवाओं की जानकारी।</p><a href="https://jansoochna.rajasthan.gov.in/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Official Portal</a></div>
+<div class="official-link"><h3>राजस्थान ई-ग्राम</h3><p>ग्राम स्तर की सेवाओं, सुविधाओं और प्रगति संबंधी जानकारी।</p><a href="https://egram.rajasthan.gov.in/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Official Portal</a></div>
+<div class="official-link"><h3>राजस्थान सरकार</h3><p>राजस्थान सरकार से संबंधित आधिकारिक जानकारी।</p><a href="https://rajasthan.gov.in/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Official Portal</a></div>
+</div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="container">
+<div class="section-heading"><div class="small">CONTACT</div><h2>संपर्क एवं उपयोगी जानकारी</h2><p>यहां केवल सार्वजनिक और साझा करने योग्य संपर्क जानकारी रखें।</p></div>
+<div class="contact-grid">
+<div class="contact-card">
+<div class="contact-row"><div class="contact-label">ग्राम पंचायत</div><div class="contact-value">बिराई</div></div>
+<div class="contact-row"><div class="contact-label">वार्ड</div><div class="contact-value">वार्ड नं. 16</div></div>
+<div class="contact-row"><div class="contact-label">जिला</div><div class="contact-value">यहां सत्यापित जिला लिखें</div></div>
+<div class="contact-row"><div class="contact-label">पंचायत समिति</div><div class="contact-value">यहां सत्यापित जानकारी लिखें</div></div>
+</div>
+<div class="contact-card">
+<h3 style="color:#234d68;margin-bottom:10px;">सूचना अपडेट करें</h3>
+<p style="font-size:14px;color:#70767b;">वेबसाइट पर कोई जानकारी जोड़ने से पहले उसके स्रोत और सत्यता की जांच करें। व्यक्तिगत दस्तावेज, आधार नंबर या अन्य संवेदनशील जानकारी सार्वजनिक रूप से न डालें।</p>
+</div>
+</div>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="container footer-grid">
+<div><h3>बिराई वार्ड 16</h3><p>ग्राम पंचायत बिराई के वार्ड नं. 16 की सार्वजनिक सूचना वेबसाइट।</p></div>
+<div><h3>वेबसाइट</h3><ul><li><a href="#about">वार्ड परिचय</a></li><li><a href="#services">सेवाएं</a></li><li><a href="#works">विकास कार्य</a></li><li><a href="#notice">सूचना</a></li></ul></div>
+<div><h3>महत्वपूर्ण</h3><ul><li>आधिकारिक स्रोत से जानकारी जांचें</li><li>व्यक्तिगत जानकारी साझा न करें</li><li>यह सरकारी वेबसाइट नहीं है</li></ul></div>
+</div>
+<div class="container copyright">© 2026 Birai Ward 16 • Informational Website</div>
+</footer>
+
+<script>
+function toggleMenu(){
+    document.getElementById("mainNav").classList.toggle("active");
+}
+document.querySelectorAll("#mainNav a").forEach(function(link){
+    link.addEventListener("click",function(){
+        document.getElementById("mainNav").classList.remove("active");
+    });
+});
+document.querySelector(".copyright").innerHTML =
+"© " + new Date().getFullYear() + " Birai Ward 16 • Informational Website";
+</script>
+
+</body>
+</html>
